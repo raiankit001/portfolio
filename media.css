@@ -1,0 +1,39 @@
+@media screen and (max-width:700px) {
+    .container{
+        padding: 30px;
+    }
+    header .nav{
+        display: none;
+    }
+    .landing-page{
+        background-position-x: 100%;
+    }
+    .breif-into{
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width:700px) {
+    
+    .hamburger,.sideMenu{
+        display: none;
+    }
+}
+@media screen and (max-width:1000px) {
+    
+    .breif-into .row{
+        flex-direction: column;
+        height: 90vh;
+    }
+    .breif-into .row .col:first-child{
+        font-size: 2rem;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .breif-into .row .col:last-child{
+        text-align: center;
+        margin: auto;
+        padding: 10% 20%;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card{
+            cursor: pointer;
+            width: 500px;
+            height: 300px;
+            padding-left: 2px;
+            background-color: red;
+            transform-style: preserve-3d;
+            perspective: 1000;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            transition:all .4s ease-in-out;
+            border-radius: 40px;
+            box-shadow: 0px 0px 10px white inset ;
+        }
+        .card:hover{
+            transform: rotate3d(1,1,0,20deg);
+        }
+        .upper-card{
+            box-shadow: 0px 0px 5px red inset ;
+            transform: translateZ(40px);
+            width: 57%;
+            height: 97%;
+            background: linear-gradient(135deg,#fff 0%,#e2c108 100%);
+            border-radius: 40px 90% 40px 40px/ 40px 90% 40px 40px;
+            opacity: .9;
+        }
+        
+        .flip-card{
+            animation: flip-card forwards 2s;
+            animation-iteration-count: 1;
+            position: relative;
+        }
+
+        @keyframes flip-card {
+            from{ 
+                transform: rotate3d(1,1,0,20deg);
+                height: 300px;
+            }
+            to{
+                transform: rotate3d(1,1,0,180deg);
+                height: 600px;
+            }
+        }
+
+        .card-title-box{
+            transform: translateZ(-30px);
+            transition-duration: .5s;
+            transition-delay: 2s;
+            animation: card-title-box forwards 1s 1s;
+            transform-origin: 50%;
+        }
+        @keyframes card-title-box {
+            from{
+                transform: translateZ(40px);
+                rotate: 0deg;
+            }
+            to{
+                transform: translateZ(-40px);
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+<body><!--
+s1=>    .flip-card takes 2 sec to finish
+s2=>    .card-title-box
+-->
+    <div class="card ">
+        <div class="upper-card "></div>
+    </div>
+
+
+    <script>
+        let card = document.querySelector('.card')
+        let upperCard = document.querySelector('.upper-card')
+
+        card.addEventListener('click', ()=>{
+            card.classList.add('flip-card')
+            upperCard.classList.add('card-title-box')
+        })
+
+        s
+
+    </script>
+</body>
+</html>

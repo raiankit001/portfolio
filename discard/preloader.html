@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #555;
+        }
+        .preloader{
+            color: white;
+            background-color: black;
+        }
+        .preloader ul{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .preloader ul li{
+            padding: 5vh;
+            position: absolute;
+            background-color: black;
+            font-size: 3rem;
+        }
+        .preloader.over{
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <ul>
+            <li id="hello"></li>
+        </ul>
+    </div>
+
+    <script>
+        const hello = document.getElementById('hello')
+        const greet = ["hello","Bonjour","स्वागत हे","Ciao","Olá","おい","Hallå","Guten tag","Hallo"]
+        const over = document.querySelector('.over')
+        const preloader = document.querySelector('.preloader')
+        let i=0
+        const body = document.getElementsByTagName('body')
+       
+        function printing(){            
+            if(i>=greet.length){
+                preloader.classList.toggle('over')
+                body.classList.remove('body-el')
+                return ;
+            }
+            hello.innerHTML = greet[i]
+            i++
+        }
+        
+
+        function count(){
+            setInterval(() => {
+                printing()
+                if(i>=greet.length){
+                preloader.classList.toggle('over')
+                return ;
+            }
+            }, 200);
+        }
+        count()
+    </script>
+</body>
+</html>
+
+<!-- 
+    <li>Hello</li>
+            <li>Bonjour</li>
+            <li>स्वागत हे</li>
+            <li>Ciao</li>
+            <li>Olá</li>
+            <li>おい</li>
+            <li>Hallå</li>
+            <li>Guten tag</li>
+            <li>Hallo</li>
+ -->

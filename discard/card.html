@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #333;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .cards>*{
+            width: 80vw;
+            height: 30vh;
+            margin:10vh auto;
+            background-color: #555;
+            border-radius: 10px 0 50px 0;
+            padding: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cards .pro2{
+            border-radius: 50px 0 10px 0;
+            flex-direction: row-reverse;
+        }
+        .cards>*>h4{
+            transition: .6s;
+            font-size: 3rem;
+            cursor: pointer;
+        }
+        .boximg{
+            background-color: black;
+            height: 18rem;
+            width: 20rem;
+            transition: .6s;
+        }
+        .card:hover h4{
+            font-size: 5rem;
+        }
+        .card .boximg:hover{
+            position: relative;
+            scale: 1.2;
+            rotate: 5deg;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <div class="card pro1">
+            <h4>E-comerce Website</h4>
+            <div class="boximg"></div>
+        </div>
+        <div class="card pro2">
+            <h4>Portfolio</h4>
+            <div class="boximg"></div>
+        </div>
+        <div class="card pro3">
+            <h4>Black Jack Game</h4>
+            <div class="boximg"></div>
+        </div>
+    </div>
+</body>
+</html>

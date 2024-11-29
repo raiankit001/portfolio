@@ -23,7 +23,7 @@
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -395,11 +395,42 @@ header .sideMenu a {
 
 
 
+/* Magnet Button */
+.magnet-btn{
+    width: 150px;
+    height: 150px;
+    background-color:   rgb(20, 157, 195);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.1s ease-out;
+    z-index: 50;
+}
+.magnet-btn:hover{
+    box-shadow: 0px 0px 5px rgb(20, 157, 195);
+}
 
 
-
-
-
+/* Footer Border */
+.footerHolder{
+    position: relative;
+}
+.footerBorder{
+    z-index: -1;
+    position: absolute;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+    top: 5rem;
+    width: 100vw;
+    height: 10rem;
+    background: rgb(15,126,156);
+background: linear-gradient(90deg, rgba(15,126,156,1) 0%, rgba(20,157,195,1) 35%, rgba(9,2,131,1) 100%);
+}
 
 
 
